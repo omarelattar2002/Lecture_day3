@@ -1,15 +1,20 @@
+*{
+    margin: 0;
+}
+
+
+
 body {
-    background-color: aqua;
+    background-color: rgb(24, 241, 122);
 }
 
 .grid-container {
-    min-height: 100vh;
+    min-height: 200vh;
     display: grid;
     grid-template-columns: 10vw 1fr 2fr 10vw;
     grid-template-rows: 10vh 40vh 1fr ;
     grid-template-areas: 
     " nav nav nav nav"
-    " . . . ."
     " . prof-pic prof-info ."
     " . posts posts .";
     row-gap: 3vh;
@@ -21,19 +26,45 @@ body {
 
 .nav {
     grid-area: nav;
+    background-color: rgb(97, 230, 201);
+    position: sticky;
+    top: 0;
+    
 }
+
+
+.nav-links {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-links > a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+.nav-links > a:hover {
+    font-size: larger;
+    text-decoration: underline;
+}
+
 
 
 .prof-pic {
-    grid-area: prof pic;
+    grid-area: prof-pic;
 }
 
+
+
 .prof-info {
-    grid-area: prof info;
+    grid-area: prof-info;
 }
 
 .posts {
-    
+    grid-area: posts ;
 }
 
 
